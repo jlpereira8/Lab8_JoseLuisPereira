@@ -811,8 +811,7 @@ public class princi extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jTabbedPane2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane2StateChanged
-        if (jTabbedPane2.getSelectedIndex() == 1) {
-            
+        if (jTabbedPane2.getSelectedIndex() == 1) {           
             administrador ap = new administrador("./mensajes.jlp");
             ap.cargarArchivo();
             DefaultComboBoxModel modelo = new DefaultComboBoxModel(ap.getListapersonas().toArray());
