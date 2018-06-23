@@ -8,6 +8,7 @@ package lab8_joseluispereira;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -39,6 +40,7 @@ public class princi extends javax.swing.JFrame {
 
         popup_borrar = new javax.swing.JPopupMenu();
         Eliminar = new javax.swing.JMenuItem();
+        Ascensos = new javax.swing.JMenuItem();
         crear_gernete = new javax.swing.JDialog();
         jButton4 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
@@ -54,6 +56,28 @@ public class princi extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         gg_empresa = new javax.swing.JTextField();
+        mensaje = new javax.swing.JDialog();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel5 = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
+        cb_para = new javax.swing.JComboBox<>();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        cb_de = new javax.swing.JComboBox<>();
+        jLabel21 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        ta_texto = new javax.swing.JTextArea();
+        jLabel28 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        cb_manuelbb = new javax.swing.JComboBox<>();
+        tf_para2 = new javax.swing.JTextField();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        tf_de2 = new javax.swing.JTextField();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel27 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -83,6 +107,8 @@ public class princi extends javax.swing.JFrame {
         gg_empresa2 = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jt_ensa = new javax.swing.JTable();
@@ -95,6 +121,14 @@ public class princi extends javax.swing.JFrame {
             }
         });
         popup_borrar.add(Eliminar);
+
+        Ascensos.setText("jMenuItem1");
+        Ascensos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AscensosActionPerformed(evt);
+            }
+        });
+        popup_borrar.add(Ascensos);
 
         jButton4.setText("Registar");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -205,6 +239,180 @@ public class princi extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jTabbedPane2.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPane2StateChanged(evt);
+            }
+        });
+
+        jButton5.setText("Enviar");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+
+        jLabel23.setText("Para:");
+
+        jLabel22.setText("De:");
+
+        jLabel21.setText("Enviar Mensaje Punta a Punta");
+
+        ta_texto.setColumns(20);
+        ta_texto.setRows(5);
+        jScrollPane5.setViewportView(ta_texto);
+
+        jLabel28.setText("Mensaje");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(98, 98, 98)
+                                .addComponent(jLabel21))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel23)
+                                            .addComponent(jLabel22))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(cb_para, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(cb_de, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addComponent(jLabel28)
+                                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(143, 143, 143)
+                                .addComponent(jButton5)))
+                        .addGap(0, 111, Short.MAX_VALUE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane5)))
+                .addContainerGap())
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel21)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addComponent(jLabel22))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cb_para, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel23))
+                        .addGap(18, 18, 18)
+                        .addComponent(cb_de, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(16, 16, 16)
+                .addComponent(jLabel28)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton5)
+                .addContainerGap())
+        );
+
+        jTabbedPane2.addTab("Escribir", jPanel5);
+
+        jLabel24.setText("Persona");
+
+        cb_manuelbb.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_manuelbbItemStateChanged(evt);
+            }
+        });
+
+        jLabel25.setText("Para:");
+
+        jLabel26.setText("De:");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane4.setViewportView(jTextArea1);
+
+        jLabel27.setText("Mensaje");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(153, 153, 153)
+                        .addComponent(jLabel24))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addComponent(cb_manuelbb, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel25)
+                                    .addComponent(jLabel26))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(tf_para2)
+                                    .addComponent(tf_de2, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)))
+                            .addComponent(jLabel27)))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cb_manuelbb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_para2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel25))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(tf_de2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jTabbedPane2.addTab("Leer", jPanel6);
+
+        javax.swing.GroupLayout mensajeLayout = new javax.swing.GroupLayout(mensaje.getContentPane());
+        mensaje.getContentPane().setLayout(mensajeLayout);
+        mensajeLayout.setHorizontalGroup(
+            mensajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensajeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane2)
+                .addContainerGap())
+        );
+        mensajeLayout.setVerticalGroup(
+            mensajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensajeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane2)
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -282,10 +490,10 @@ public class princi extends javax.swing.JFrame {
                 jButton1MouseClicked(evt);
             }
         });
-        jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(594, 177, 139, -1));
+        jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 180, 139, -1));
 
-        jLabel8.setText("Click derecho para eliminar");
-        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(826, 35, -1, -1));
+        jLabel8.setText("Click derecho para opciones de empleados");
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 40, -1, -1));
 
         jLabel4.setText("Nombre");
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
@@ -352,6 +560,17 @@ public class princi extends javax.swing.JFrame {
             }
         });
         jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, -1, -1));
+
+        jButton2.setText("Enviar mensaje");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 130, -1));
+
+        jLabel20.setText("Como se usa?");
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 270, -1, -1));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 173, 1050, 390));
 
@@ -432,8 +651,9 @@ public class princi extends javax.swing.JFrame {
         double Salario = Double.parseDouble(gg_salario.getText());
         DefaultListModel modelo = (DefaultListModel) jl_empleados.getModel();
         modelo.addElement(new empleados(gg_nombre2.getText(), gg_empresa2.getText(), gg_contra2.getText(), null, Salario, wombo_combo.getSelectedItem().toString()));
-    
-
+        o.add(new empleados(gg_nombre2.getText(), gg_empresa2.getText(), gg_contra2.getText(), null, Salario, wombo_combo.getSelectedItem().toString()));
+        cb_de.addItem(gg_nombre2.getText());
+        cb_para.addItem(gg_nombre2.getText());
 
     }//GEN-LAST:event_bt_piezaMouseClicked
 
@@ -548,6 +768,59 @@ public class princi extends javax.swing.JFrame {
          JOptionPane.showMessageDialog(this, "Con este boton envias un empleado a un jefe");
     }//GEN-LAST:event_jLabel19MouseClicked
 
+    private void AscensosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AscensosActionPerformed
+        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(this, "Seguro de Ascender ? ", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (response == JOptionPane.OK_OPTION) {
+            DefaultTreeModel m = (DefaultTreeModel) jt_arbol.getModel();
+            
+            m.reload();
+            
+        }
+    }//GEN-LAST:event_AscensosActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:      
+        mensaje.setModal(true);//para solo poder a acceder a una ventana
+        mensaje.pack();
+        mensaje.setLocationRelativeTo(this);//centra con el frame principal
+        mensaje.setVisible(true);
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void cb_manuelbbItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_manuelbbItemStateChanged
+        // TODO add your handling code here:
+        temp = (mensajes) cb_manuelbb.getSelectedItem();
+        if (temp != null) {
+            tf_de2.setText(temp.getDestino());
+            tf_para2.setText(temp.getFuente());
+            ta_texto.setText(temp.getTexto());
+            pos = cb_manuelbb.getSelectedIndex();
+        }
+    }//GEN-LAST:event_cb_manuelbbItemStateChanged
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:administrador ap = new administrador("./mensajes.jlp");
+        mensajes m = new mensajes(cb_para.getSelectedItem().toString(),cb_de.getSelectedItem().toString(),ta_texto.getText());
+        administrador ap = new administrador("./mensajes.jlp");
+        ap.cargarArchivo();
+        ap.setPersona(m);
+        ap.escribir();
+        JOptionPane.showMessageDialog(this, "Mensaje enviado exitosamente");
+
+        
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jTabbedPane2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane2StateChanged
+        if (jTabbedPane2.getSelectedIndex() == 1) {
+            
+            administrador ap = new administrador("./mensajes.jlp");
+            ap.cargarArchivo();
+            DefaultComboBoxModel modelo = new DefaultComboBoxModel(ap.getListapersonas().toArray());
+            System.out.println("entra"+ap.getListapersonas());
+            cb_manuelbb.setModel(modelo);
+        }
+    }//GEN-LAST:event_jTabbedPane2StateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -585,9 +858,13 @@ public class princi extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Ascensos;
     private javax.swing.JMenuItem Eliminar;
     private javax.swing.JButton bt_gg;
     private javax.swing.JButton bt_pieza;
+    private javax.swing.JComboBox<String> cb_de;
+    private javax.swing.JComboBox<String> cb_manuelbb;
+    private javax.swing.JComboBox<String> cb_para;
     private javax.swing.JDialog crear_gernete;
     private javax.swing.JTextField gg_contra;
     private javax.swing.JTextField gg_contra2;
@@ -601,8 +878,10 @@ public class princi extends javax.swing.JFrame {
     private javax.swing.JTextField gg_salario;
     private javax.swing.JTextField gg_salario2;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -615,6 +894,15 @@ public class princi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -626,14 +914,24 @@ public class princi extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JList<String> jl_empleados;
     private javax.swing.JTree jt_arbol;
     private javax.swing.JTable jt_ensa;
+    private javax.swing.JDialog mensaje;
     private javax.swing.JPopupMenu popup_borrar;
+    private javax.swing.JTextArea ta_texto;
+    private javax.swing.JTextField tf_de2;
+    private javax.swing.JTextField tf_para2;
     private javax.swing.JComboBox<String> wombo_combo;
     // End of variables declaration//GEN-END:variables
 DefaultMutableTreeNode nodo_carro;
@@ -645,5 +943,6 @@ DefaultMutableTreeNode nodo_carro;
     int aux = 0;
     empleados pieza_selccionada;
     DefaultMutableTreeNode raiz;
-
+    mensajes temp;
+    int pos;
 }
